@@ -2546,21 +2546,21 @@ Presently with\ %
 \def\@maketitle{%
 \newpage\null
 %%%%%%%%%%
-\ifDS@english
-%%
-\vskip-1.3mm%
-\ifx\SHUBETUname\relax%
-{\SHUBETUfontE{\SHUBETUname@DEF}}%%
-\else
-{\SHUBETUfontE{\SHUBETUname}}%%
-\fi
-%%
-\else
-\ifx\SHUBETUname\relax%
-{\SHUBETUfontJ{\SHUBETUname@DEF}}%%
-\else
-{\SHUBETUfontJ{\SHUBETUname}}%%
-\fi\fi
+% \ifDS@english
+% %%
+% \vskip-1.3mm%
+% \ifx\SHUBETUname\relax%
+% {\SHUBETUfontE{\SHUBETUname@DEF}}%%
+% \else
+% {\SHUBETUfontE{\SHUBETUname}}%%
+% \fi
+% %%
+% \else
+% \ifx\SHUBETUname\relax%
+% {\SHUBETUfontJ{\SHUBETUname@DEF}}%%
+% \else
+% {\SHUBETUfontJ{\SHUBETUname}}%%
+% \fi\fi
 %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 %\vskip\shubetutitlesep% 
@@ -2651,7 +2651,7 @@ Presently with\ %
 \mbox{\box\@jkeywordbox}\par%
 %%%%%%%%%%%%%%%%%%%%%%
 %\vskip\Jkeywordetitle%
-\vskip 11pt
+\vskip 20pt
 %%%%%%%%%%%%%%%%%%%%%%
 {\etitlefont%
 {\bfseries{\@etitle}}}\par%
@@ -2688,7 +2688,7 @@ Presently with\ %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \mbox{\box\@ekeywordbox}\par%
 %%%%%%%%%%%%%%%%%%%
-\vskip 11pt%
+\vskip 20pt%
 %%%%%%%%%%%%%%%%%%%
 }
 \fi
