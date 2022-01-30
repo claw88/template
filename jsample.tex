@@ -12,29 +12,23 @@
 
 
 \begin{document}
-\title{情報処理学会論文誌ジャーナル論文の準備方法\\
-（ipsj.cls version 2.01）}
+\title{情報処理学会論文誌ジャーナル論文の準備方法}
+\etitle{How to Prepare Your Paper for IPSJ Journal}
 
-\etitle{How to Prepare Your Paper for IPSJ Journal \\
-(ipsj.cls version 2.01)}
-
-% \affiliate{IPSJ}{情報処理学会\\
-% IPSJ, Chiyoda, Tokyo 101--0062, Japan}
-% \paffiliate{JU}{情報処理大学\\
-% Johoshori University}
-
-\author{小林 弘人\dag}{Hiroto KOBAYASHI\dag}{}
-\author{入江 豪\dag\dag}{Go IRIE\dag\dag}{}
-\author{古田 諒佑\dag\dag\dag}{Ryosuke FURUTA\dag\dag\dag}{}
-\author{山本 洋太\dag}{Yota YAMAMOTO\dag}{}
-\author{谷口 行信\dag}{Yukinobu Taniguchi\dag}{} 
+\author{小林 弘人$^{\dag}$}{Hiroto KOBAYASHI$^{\dag}$}{}
+\author{入江 豪$^{\dag\dag}$}{Go IRIE$^{\dag\dag}$}{}
+\author{古田 諒佑$^{\dag\dag\dag}$}{Ryosuke FURUTA$^{\dag\dag\dag}$}{}
+\author{山本 洋太$^{\dag}$}{Yota YAMAMOTO$^{\dag}$}{}
+\author{谷口 行信$^{\dag}$}{Yukinobu Taniguchi$^{\dag}$}{} 
 
 % TODO: \and も使えるよ 改行したりしそう フィードバックくれ
-\ssiiaffiliation{\dag 東京理科大学\\
-\dag\dag NTTコミュニケーション科学基礎研究所\\
-\dag\dag\dag 東京大学}
-\ssiieaffiliation{eigo no jusho}
-\ssiiemail{\url{4620510@ed.tus.ac.jp}}
+\ssiiaffiliation{\dag~東京理科大学~〒125--8585~東京都葛飾区新宿6--3--1\\
+\dag\dag~NTTコミュニケーション科学基礎研究所~〒243--0198~神奈川県厚木市森の里若宮3--1\\
+\dag\dag\dag~東京大学~〒153--8505~東京都目黒区駒場4--6--1}
+\ssiieaffiliation{\dag~Tokyo University of Science~6--3--1 Niijuku, Katsushika-ku, Tokyo, 125--8585 Japan\\
+\dag\dag~NTT Communication Science Laboratories~3--1 Morinosatowakamiya, Atsugi-shi, Kanagawa, 243--0198 Japan\\
+\dag\dag\dag~The University of Tokyo~4--6--1 Komaba, Meguro-ku, Tokyo, 153--8505 Japan}
+\ssiiemail{\dag~\url{4620510@ed.tus.ac.jp}}
 
 \begin{abstract}
 本稿は，情報処理学会論文誌ジャーナルに投稿する原稿を執筆する際，
@@ -66,205 +60,6 @@ IPSJ Journal, \LaTeX, style files, ``Dos and Don'ts'' list
 \maketitle
 
 \section{はじめに}
-
-
-
-
-
-%3
-\section{論文フォーマットの指針}
-\label{sec:format}
-
-以下，
-情報処理学会論文誌ジャーナル用スタイルファイルを用いた論文フォーマットの
-指針について述べるので，
-これに従って原稿を用意頂きたい．\LaTeX を用いた
-一般的な文章作成技術については，\cite{okumura} 等を参考にされたい．
-
-
-
-%4
-\section{論文の構成}
-\label{config}
-
-ファイルは次のようになる．
-下線部は投稿時に省略可能なもの．
-また論文誌トランザクション特有コマンドについては \ref{sig}~節を参照されたい．
-
-\noindent
-\|\documentclass[submit]{ipsj}|\\
-\quad 必要ならばオプションのスタイルを追加\\
-\Underline{\|\setcounter{|{\bf 巻数}\|}{<巻数>}|}\\
-\Underline{\|\setcounter{|{\bf 号数}\|}{<号数>}|}\\
-\Underline{\|\setcounter{|{\bf page}\|}{<先頭ページ>}|}\\
-\Underline{\|\|{\bf 受付}\|{<年>}{<月>}{<日>}|}\\
-\Underline{\|\|{\bf 採録}\|{<年>}{<月>}{<日>}|}\\
-\quad 必要ならばユーザのマクロをここに記述\\
-\|\begin{document}|\\
-\|\title{表題(和文)}|\\
-\|\etitle{表題(英文)}|\\
-\Underline{\|\affiliate{所属ラベル}{<和文所属>\\<英文所属>}|}\\
-\quad 必要ならば \|\paffiliate| により現在の所属を宣言する\\
-\Underline{\|\paffiliate{現所属ラベル}{<和現所属>\\<英現所属>}|}\\\\
-\Underline{\|\author{情報 太郎}{Taro Joho}|}\\
-\Underline{\|          {<所属ラベル>}[E-mail]|}\\
-\Underline{\|\author{処理 花子}{Hanako Shori}|}\\
-\Underline{\|          {<所属ラベル2,現所属ラベル3>}|}\\\\
-\|\begin{abstract}|\\
-\|<概要（和文）>|\\
-\|\end{abstract}|\\
-\|\begin{jkeyword}|\\
-\|<キーワード>|\\
-\|\end{jkeyword}|\\
-\|\begin{eabstract}|\\
-\|<概要（英文）>|\\
-\|\end{eabstract}|
-\|\begin{ekeyword}|\\
-\|<KeyWords>|\\
-\|\end{ekeyword}|\\
-\|\maketitle|\\
-\|\section{|第1節の表題\|}|\\
-\dots\dots\dots\dots\dots\\
-\quad \|<本文>|\\
-\dots\dots\dots\dots\dots\\
-謝辞がある場合は\\
-\|\begin{acknowledgment}|\\
-\|\end{acknowledgment}|\\\\
-\|\begin{thebibliography}{99}%9 or 99|\\
-\|\bibitem{1}|\\
-\|\bibitem{2}|\\
-\|\end{thebibliography}|\\\\
-付録がある場合は\\
-\|\appendix|\\
-\|\section{|付録1節の表題\|}|\\\\
-\Underline{\|\begin{biography}|}\\
-\Underline{\|\profile{<X>}{<苗字 名前>}{<プロフィール文章>}|}\\
-\Underline{\|\end{biography}|}\\
-\|\end{document}|
-
-
-
-%4.1
-\subsection{オプション・スタイル}
-\label{option} 
-\|\documentclass{ipsj}|のオプション\footnote{論文誌トランザクション用オプションは \ref{sig}~節で説明する．}として，
-以下のものを用意してある．
-{\bf 何も定義しなければ和文論文用の標準スタイル}となるが，
-今回，組版の際に和文論文のタイトル，
-和文論文種別に「{\bf 太ミン}」「{\bf 太ゴ}」のフォントを使用しているため，
-\TeX 標準フォントに置き換える \|submit| というオプションを用意した．
-
-\begin{enumerate}
-\item\|submit         | フォント置換用
-\item\|invited        | 招待論文
-\item\|sigrecommended | 推薦論文
-\item\|technote       | テクニカルノート用
-\item\|preface        | 序文用
-\item\|JIP            | 英文用
-\end{enumerate}
-これらのオプションは任意の組合せで使用が可能である．
-
-
-
-なお，\|\usepackage| で補助的なスタイルファイルを指定した場合には，
-最終原稿用のファイル群に必ずスタイルファイルを含める．
-ただし，\LaTeXe の標準配布に含まれているもの
-（たとえば \|graphicx|）については同封の必要はない．
-
-スタイルファイルによっては論文誌スタイルと矛盾するようなものもあるので，
-注意し使用しきたい．
-
-
-
-%4.1.1
-\subsubsection{研究報告専用オプション・スタイル}
-\label{4-1-1}
-
-上記オプションとは別に，研究報告専用のオプションを用意した．
-\begin{enumerate}
-\item\|techrep   | 研究報告（必須）
-\item\|noauthor  | 英文著者表記無しの指定（和文；任意）
-\end{enumerate}
-
-和文の研究報告では，
-和文キーワード，
-英文著者名，
-英文タイトル，
-英文アブスト，
-英文キーワードが任意入力となるため，
-\|techrep|オプションを使用していれば，
-任意項目が無くとも
-コンパイルが止まることはない（\|tech-jsample.tex|参照）．
-
-\|\documentclass[submit,techrep]{ipsj}|\\
-とすれば，研究報告のスタイルとなり，
-
-\|\documentclass[submit,techrep,noauthor]{ipsj}|\\
-とすれば，
-英文著者名等が入らない研究報告のスタイルとなる．
-
-
-
-英文の研究報告では，
-キーワードのみが任意入力となるため，
-\|noauthor|は使用できないので注意する
-（\|tech-esample.tex|参照）．
-
-
-%4.2
-\subsection{表題・著者名等}
-
-表題，著者名とその所属，
-および概要を前述のコマンドや環境により{\bf 和文と英文の双方について}定義した後，
-\|\maketitle| によって出力する．
-
-
-
-%4.2.1
-\subsubsection{表題} 
-
-表題は，\|\title| および \|\etitle| で定義した表題はセンタリングされる．
-文字数の多いものについては，適宜 \|\\| を挿入して改行する．
-
-%4.2.2
-\subsubsection{著者名・所属} 
-
-各著者の所属を第一著者から順に \|\affiliate| を用いてラベル（第1引数）を付けながら定義すると，
-脚注に番号を付けて所属が出力される．
-なお，複数の著者が同じ所属である場合には，一度定義するだけで良い．
-
-
-
-現在の所属は \|\paffiliate| を用い，同様にラベル，所属先を記述する．
-所属先には自動で「現在」，
-\|\\|の改行で「Presently with」が挿入される．
-著者名は \|\author| で定義する．
-各著者名の直後に，英文著者名，所属ラベルとメールアドレスを記入する．
-著者が複数の場合は \|\author| を繰り返すことで，
-2人，3人，\dots と増えていく．
-現在の所属や，複数の所属先を追加する場合には，
-所属ラベルをカンマで区切り，追加すればよい．
-
-
-
-また，
-メールアドレス部分は省略が可能だが，必ず代表者のアドレスは必要となる．
-なお，和文著者名，英文著者名は，姓と名を半角（ASCII）の空白で区切る．
-
-
-
-%4.2.3
-\subsubsection{概要} 
-
-和文の概要は \|abstract| 環境の中に，
-英文の概要は \|eabstract| 環境の中に，それぞれ記述する．
-
-%4.2.4
-\subsubsection{キーワード} 
-
-和文の概要は \|jkeyword| 環境の中に，
-英文の概要は \|ekeyword| 環境の中に，それぞれ1〜5語記述する．
-
 
 
 

@@ -2636,7 +2636,7 @@ Presently with\ %
 \end{tabular}
 \par 
 \begin{tabular}{r@{~}l}
-    E-mail: & {\tt \@ssiiemail}
+    E-mail: & {\@ssiiemail}
 \end{tabular}
 \par
 }
@@ -2675,7 +2675,7 @@ Presently with\ %
 \end{tabular}
 \par 
 \begin{tabular}{r@{~}l}
-    E-mail: & {\tt \@ssiiemail}
+    E-mail: & {\@ssiiemail}
 \end{tabular}
 \par
 }
