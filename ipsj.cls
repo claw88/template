@@ -2651,7 +2651,7 @@ Presently with\ %
 \mbox{\box\@jkeywordbox}\par%
 %%%%%%%%%%%%%%%%%%%%%%
 %\vskip\Jkeywordetitle%
-\vskip 2ex 
+\vskip 11pt
 %%%%%%%%%%%%%%%%%%%%%%
 {\etitlefont%
 {\bfseries{\@etitle}}}\par%
@@ -2688,7 +2688,7 @@ Presently with\ %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \mbox{\box\@ekeywordbox}\par%
 %%%%%%%%%%%%%%%%%%%
-\vskip\JEhonbunsep%
+\vskip 11pt%
 %%%%%%%%%%%%%%%%%%%
 }
 \fi
@@ -2790,7 +2790,7 @@ Presently with\ %
 %% 
 \def\jtitlefont{%
 \if@submit
-   \fontsize{26\JQ}{34\h}
+   \fontsize{16pt}{34\h}
    \usefont{JY1}{gt}{m}{n}%
 %   \usefont{OT1}{ptm}{b}{n}%Times-Bold*
    \bfseries%
@@ -2817,7 +2817,7 @@ Presently with\ %
 
 %% v1.02c
 %% E-title
-\def\etitlefont{\fontsize{20\Q}{22\h}\mathversion{bold}\selectfont}
+\def\etitlefont{\fontsize{16pt}{22\h}\mathversion{bold}\selectfont}
 
 %% E-Uketuke
 \def\euketukefont{%
@@ -2832,10 +2832,10 @@ Presently with\ %
 \def\labelfont{\useroman{OT1}{cmr}{m}{n}\selectfont}
 
 %% J-name
-\def\authorfont{\fontsize{16\JQ}{22\h}\selectfont}
+\def\authorfont{\fontsize{12pt}{22\h}\selectfont}
 
 %% J-(e)-name
-\def\eauthorfont{\fontsize{14\JQ}{18\h}\selectfont}%14Qx18
+\def\eauthorfont{\fontsize{12pt}{18\h}\selectfont}%14Qx18
 
 
 %% E-name
@@ -3065,7 +3065,7 @@ Abstract:\hskip.5em%
 \def\abstract{%
  \global\setbox\@abstractbox\hbox\bgroup%
   \begin{minipage}[t]{\textwidth}% 12Q 18H
-\fontsize{12\JQ}{18\h}\selectfont%
+\fontsize{10pt}{18\h}\selectfont%
 \noindent{\GAIYOU}%
 \ignorespaces}
 \fi
@@ -3083,7 +3083,7 @@ Abstract:\hskip.5em%
 \def\eabstract{%
  \global\setbox\@eabstractbox\hbox\bgroup%
   \begin{minipage}[t]{\textwidth}% 12Q 16H
-\fontsize{12\Q}{15\h}\selectfont%
+\fontsize{10pt}{15\h}\selectfont%
 \noindent{\EGAIYOU}%
 \ignorespaces}
 
@@ -3131,7 +3131,7 @@ Keyword\hskip.5em%
 \def\jkeyword{\@par%
 \global\setbox\@jkeywordbox\hbox\bgroup
   \begin{minipage}[t]{\textwidth}%
-\fontsize{12\JQ}{15\h}\selectfont%
+\fontsize{10pt}{15\h}\selectfont%
 {\noindent{\JKEYWORD}}%
 \ignorespaces}
 \def\endjkeyword{%
@@ -3141,7 +3141,7 @@ Keyword\hskip.5em%
 \def\ekeyword{\@par%
  \global\setbox\@ekeywordbox\hbox\bgroup
   \begin{minipage}[t]{\textwidth}%
-\fontsize{12\Q}{15\h}\selectfont%
+\fontsize{10pt}{15\h}\selectfont%
 {\noindent{\EKEYWORD}}%
 \ignorespaces}
 \def\endekeyword{%
