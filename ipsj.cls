@@ -2563,7 +2563,7 @@ Presently with\ %
 \fi\fi
 %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\vskip\shubetutitlesep% 
+%\vskip\shubetutitlesep% 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %\vskip 10mm%
@@ -2614,7 +2614,7 @@ Presently with\ %
 {\@title}\par}%
 %%%%%%%%%%%%%%%%%%%%%%%%
 %\vskip\Jtitlejauthorsep%
-\vskip .3em 
+\vskip 2ex
 %%%%%%%%%%%%%%%%%%%%%%%%
 %% author
 %======
@@ -2622,7 +2622,7 @@ Presently with\ %
 \authoroutput{}\par}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %\vskip\Jauthorjreceivesep%
-\vskip .3em 
+\vskip .3ex
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %======
 % {\juketukefont%
@@ -2646,24 +2646,24 @@ Presently with\ %
 %%%%%%%%%%%%%%%%%%%%%%%%
 \mbox{\box\@abstractbox}\par%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\vskip\Jabstsepjkeyword%
+\vskip .5ex 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \mbox{\box\@jkeywordbox}\par%
 %%%%%%%%%%%%%%%%%%%%%%
 %\vskip\Jkeywordetitle%
-\vskip 2em 
+\vskip 2ex 
 %%%%%%%%%%%%%%%%%%%%%%
 {\etitlefont%
 {\bfseries{\@etitle}}}\par%
 %%%%%%%%%%%%%%%%%%%%%%
 %\vskip\Jetitleeauthor%
-\vskip .3em 
+\vskip 2ex 
 %%%%%%%%%%%%%%%%%%%%%%
 {\eauthorfont%
 \authoroutput{e}\par}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\vskip\Jeauthorereceivesep%
-\vskip .3em 
+\vskip .3ex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % {\euketukefont%
 % {\@euketsuke}\par}%
@@ -2684,7 +2684,7 @@ Presently with\ %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \mbox{\box\@eabstractbox}\par%
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\vskip\Jeabstekeywordsep%
+\vskip .5ex 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \mbox{\box\@ekeywordbox}\par%
 %%%%%%%%%%%%%%%%%%%
@@ -3064,7 +3064,7 @@ Abstract:\hskip.5em%
 \else
 \def\abstract{%
  \global\setbox\@abstractbox\hbox\bgroup%
-  \begin{minipage}[t]{.8\textwidth}% 12Q 18H
+  \begin{minipage}[t]{\textwidth}% 12Q 18H
 \fontsize{12\JQ}{18\h}\selectfont%
 \noindent{\GAIYOU}%
 \ignorespaces}
@@ -3082,7 +3082,7 @@ Abstract:\hskip.5em%
 
 \def\eabstract{%
  \global\setbox\@eabstractbox\hbox\bgroup%
-  \begin{minipage}[t]{.8\textwidth}% 12Q 16H
+  \begin{minipage}[t]{\textwidth}% 12Q 16H
 \fontsize{12\Q}{15\h}\selectfont%
 \noindent{\EGAIYOU}%
 \ignorespaces}
@@ -3130,7 +3130,7 @@ Keyword\hskip.5em%
 
 \def\jkeyword{\@par%
 \global\setbox\@jkeywordbox\hbox\bgroup
-  \begin{minipage}[t]{.8\textwidth}%
+  \begin{minipage}[t]{\textwidth}%
 \fontsize{12\JQ}{15\h}\selectfont%
 {\noindent{\JKEYWORD}}%
 \ignorespaces}
@@ -3140,7 +3140,7 @@ Keyword\hskip.5em%
 
 \def\ekeyword{\@par%
  \global\setbox\@ekeywordbox\hbox\bgroup
-  \begin{minipage}[t]{.8\textwidth}%
+  \begin{minipage}[t]{\textwidth}%
 \fontsize{12\Q}{15\h}\selectfont%
 {\noindent{\EKEYWORD}}%
 \ignorespaces}
