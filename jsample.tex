@@ -2,11 +2,15 @@
 \documentclass[submit]{ipsj}
 %\documentclass{ipsj}
 %
-\usepackage{graphicx}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage{latexsym}
 \usepackage{url}
+\usepackage{otf}
 \usepackage[top=28truemm,bottom=24truemm,left=15truemm,right=15truemm]{geometry}
 
+\makeatletter
+\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
 \def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
 \def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
 \def\|{\verb|}
@@ -206,7 +210,7 @@ Adobeのpdf readerで読めることを確認した後，
 % \begin{acknowledgment}
 % \end{acknowledgment}
 
-\bibliographystyle{ipsjunsrt}
+\bibliographystyle{junsrt}
 \bibliography{references}
 
 
