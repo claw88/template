@@ -11,10 +11,6 @@
 \makeatletter
 \newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
 \makeatother
-\def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
-\def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
-\def\|{\verb|}
-
 
 \begin{document}
 \title{情報処理学会論文誌ジャーナル論文の準備方法}
@@ -107,22 +103,6 @@ A4縦型2段組を採用している．
 からダウンロードすることができる．論文執筆キットは以下のファイルを含んでいる．
 
 
-\begin{Enumerate}
-\item \|ipsj.cls      |: 原稿用スタイルファイル
-\item \|ipsjpref.sty  |: 序文用スタイル
-\item \|jsample.tex   |: 本稿のソースファイル
-\item \|esample.tex   |: 英文サンプルのソースファイル
-\item \|ipsjsort.bst  |: jBibTEX スタイル（著者名順）
-\item \|ipsjunsrt.bst |: jBibTEX スタイル（出現順）
-\item \|bibsample.bib |: 文献リストのサンプル
-\item \|ebibsample.bib|: 英文文献リストのサンプル
-\item \makebox[9.47zw][l]{{\tt ipsjtech.sty}}: 研究報告用スタイル
-\item \| tech-jsample.tex|: 研究報告（和文）のサンプル
-\item \| tech-esample.tex|: 研究報告（英文）のサンプル
-\end{Enumerate}%
-実行環境としては\LaTeXe を前提としているので，準備されたい．
-
-
 Microsoft Wordに関しては，投稿されたフォーマットを基に，
 業者が \LaTeX に変換して組版を行うので，
 あくまでも参考としてしか使わないことを承知して頂きたい．
@@ -132,15 +112,6 @@ Microsoft Wordに関しては，投稿されたフォーマットを基に，
 %2.2
 \subsection{最終原稿の作成と投稿}
 
-本稿に従って用意した原稿の \LaTeX ソースからpdfファイルを作成し，
-Adobeのpdf readerで読めることを確認した後，
-\begin{quote}
-\small
-\|https://mc.manuscriptcentral.com/ipsj|
-\end{quote}
-上記のURLから投稿する．
-投稿の流れについては，
-を参照されたい．
 
 なお，情報処理学会論文誌ジャーナルでは，
 論文の著者が査読者の名前を知ることがないシングルブラインドの査読を取り入れている．
@@ -157,15 +128,6 @@ Adobeのpdf readerで読めることを確認した後，
 なお後の校正の手間を最小にするために，
 この段階で記述の誤りなどを完全に除去するように綿密にチェックして頂きたい．
 
-
-
-学会へは{\bf \LaTeX ファイル（をまとめたもの）}を送信する．
-送信するファイル群の標準的な構成は \|.tex| と \|.bbl| であり，
-この他にPostScriptファイルや特別なスタイルファイルがあれば付加する．
-なお \|.tex| は印刷業者が修正することがあるので，
-{必ず一つのファイルにする}．
-また必要なファイルが全てそろっていること，
-特に特別なスタイルファイルに洩れがないことを，注意深く確認して頂きたい．
 
 
 ファイルの送信方法などについては，
